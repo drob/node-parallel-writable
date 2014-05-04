@@ -13,13 +13,6 @@ var task = function (item, callback) {
 }
 
 var writable = new ParallelWritable({task: task, limit: 10});
-var readable = getReadableStreamSomehow();
-
-readable.on('error', function (err) { console.log('Error!!', err); });
-writable
-  .on('error', function (err) { console.log('Error!!', err); });
-  .on('finish', function() { console.log('All done!'); });
-readable.pipe(writable);
 ```
 
 Alternately, you can create a parallel writable stream by subclassing the `ParallelWritable` class and supplying a `_task`
@@ -43,5 +36,5 @@ If we pass in an `options` hash with `limit` set to `5`, this will create a writ
 #### new ParallelWritable(options)
 
 In addition to the standard writable stream options, `ParallelWritable` supports:
-* `task(item, callback)` - function to be run on each object written to this stream. This function must call `callback`, with an optional error, when it is done.
-* `limit` - maximum number of concurrent calls to `task(item, callback)`. Defaults to `10`.
+* `task(item, callback)` - function to be run on each object written to this stream. This function must call callback, with an optional error, when it is done.
+* `limit` - maximum number of concurrent calls to `task`. Defaults to 10.
