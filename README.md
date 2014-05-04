@@ -1,4 +1,4 @@
-stream-parallel
+parallel-writable
 =========
 
 Create writable streams that process items in parallel.

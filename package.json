@@ -1,5 +1,5 @@
 {
-  "name": "stream-parallel",
+  "name": "parallel-writable",
   "version": "0.1.0",
   "description": "Create writable streams that process items in parallel.",
   "main": "lib/index.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/drob/node-stream-parallel.git"
+    "url": "https://github.com/drob/node-parallel-writable.git"
   },
   "keywords": [
     "parallel",
@@ -23,7 +23,7 @@
   "author": "Dan Robinson <dan@drob.us>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/drob/node-stream-parallel/issues"
+    "url": "https://github.com/drob/node-parallel-writable/issues"
   },
   "dependencies": {
     "async": "~0.8.0"
