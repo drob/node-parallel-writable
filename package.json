@@ -1,0 +1,35 @@
+{
+  "name": "stream-parallel",
+  "version": "0.1.0",
+  "description": "Create writable streams that process items in parallel.",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "prepublish": "coffee -o lib -c src",
+    "test": "mocha --compilers coffee:coffee-script test/test.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drob/node-stream-parallel.git"
+  },
+  "keywords": [
+    "parallel",
+    "concurrent",
+    "writable",
+    "stream"
+  ],
+  "author": "Dan Robinson <dan@drob.us>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drob/node-stream-parallel/issues"
+  },
+  "dependencies": {
+    "async": "~0.8.0"
+  },
+  "devDependencies": {
+    "underscore": "~1.6.0",
+    "mocha": "~1.18.2"
+  }
+}
